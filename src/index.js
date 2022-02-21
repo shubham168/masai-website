@@ -4,17 +4,17 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import { InfoContextProvider } from "./context/InfoContext";
-import { RegisterContextProvider } from "./context/AuthContext";
+import { RegisterContextProvider } from "./context/RegisterContext";
+import { AuthContextProvider } from "./context/AuthContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <InfoContextProvider>
-        <RegisterContextProvider>
+      <RegisterContextProvider>
+        <AuthContextProvider>
           <App />
-        </RegisterContextProvider>
-      </InfoContextProvider>
+        </AuthContextProvider>
+      </RegisterContextProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
